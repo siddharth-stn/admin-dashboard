@@ -341,4 +341,29 @@ template {
   box-sizing: border-box;
 }
 
+body {
+  background-color: gray;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: min(20%, 150px) 1fr;
+  grid-template-areas: "sidebar header" "sidebar main";
+}
+.container .header {
+  grid-area: header;
+}
+.container .sidebar {
+  grid-area: sidebar;
+  background-color: #0ea5e9;
+}
+.container .main {
+  grid-area: main;
+}
+.container div {
+  border: 2px solid red;
+}
+
 /*# sourceMappingURL=styles.css.map */

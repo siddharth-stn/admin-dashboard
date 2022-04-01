@@ -5,3 +5,33 @@
 *, ::before, :after {
     box-sizing: border-box;
 }
+
+body {
+    background-color: gray;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min(20%, 150px) 1fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+    
+    .header {
+        grid-area: header;
+    }
+    .sidebar {
+        grid-area: sidebar;
+        background-color: var.$sidebar-background;
+    }
+    .main {
+        grid-area: main;
+    }
+
+    div {
+        border: 2px solid red;
+    }
+}
+
