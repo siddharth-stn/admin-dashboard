@@ -1,0 +1,7 @@
+@use '../normalize';
+@use 'var';
+@use 'fonts';
+
+*, ::before, :after {
+    box-sizing: border-box;
+}
