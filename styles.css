@@ -372,15 +372,18 @@ body {
 .container .sidebar ul {
   list-style-type: none;
   padding-left: 0px;
+  font-size: 1.1rem;
 }
 .container .sidebar ul:last-child {
-  margin-top: 30px;
+  margin-top: 50px;
 }
-.container .sidebar ul,
-.container .sidebar div {
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
+.container .sidebar ul > div, .container .sidebar > div {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+}
+.container .sidebar ul > div {
+  margin-bottom: 10px;
 }
 .container .main {
   grid-area: main;
@@ -396,6 +399,9 @@ body {
 .header .search {
   grid-template-columns: 20px 1fr;
   gap: 10px;
+}
+.header .search .mag {
+  margin-top: 5px;
 }
 .header .search input {
   padding: 0px 10px;
@@ -413,7 +419,7 @@ body {
   font-size: 0.8rem;
 }
 .header .bottom-left {
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 1fr 15fr;
 }
 .header .bottom-left .name {
   display: grid;
@@ -460,6 +466,7 @@ body {
 .main .article .card {
   border-radius: 20px;
   border-left: 7px solid goldenrod;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
   padding: 20px;
   background-color: #fff;
   display: grid;
@@ -467,6 +474,25 @@ body {
 .main .article .card .buttons {
   grid-column: 5/6;
   grid-row: 5/6;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.main .article .card .buttons div {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+.main .article .card .buttons :nth-child(1) {
+  background-image: url("../assets/images/star-cog.png");
+}
+.main .article .card .buttons :nth-child(2) {
+  background-image: url("../assets/images/eye-plus.png");
+}
+.main .article .card .buttons :nth-child(3) {
+  background-image: url("../assets/images/git.png");
 }
 .main .article .card p {
   margin-top: 0px;
@@ -496,6 +522,7 @@ body {
   font-weight: bold;
 }
 .main aside .announce > div {
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
   border-radius: 10px;
   padding: 20px 30px;
@@ -513,6 +540,7 @@ body {
   padding-left: 10px;
 }
 .main aside .trending > div {
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding: 20px 30px;
   background-color: #fff;
@@ -522,7 +550,7 @@ body {
 .main aside .trending > div > div {
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
 }
 .main aside .trending > div > div > div:nth-child(2) {
   display: grid;
