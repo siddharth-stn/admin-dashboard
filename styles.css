@@ -507,6 +507,7 @@ body {
 }
 .main aside .announce {
   display: grid;
+   grid-template-rows: 30px;
 }
 .main aside .announce div {
   padding-top: 10px;
@@ -533,6 +534,7 @@ body {
 }
 .main aside .trending {
   display: grid;
+   grid-template-rows: 30px;
 }
 .main aside .trending > span {
   font-weight: bold;
