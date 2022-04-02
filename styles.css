@@ -486,13 +486,13 @@ body {
   background-position: center;
 }
 .main .article .card .buttons :nth-child(1) {
-  background-image: url("../assets/images/star-cog.png");
+  background-image: url("./assets/images/star-cog.png");
 }
 .main .article .card .buttons :nth-child(2) {
-  background-image: url("../assets/images/eye-plus.png");
+  background-image: url("./assets/images/eye-plus.png");
 }
 .main .article .card .buttons :nth-child(3) {
-  background-image: url("../assets/images/git.png");
+  background-image: url("./assets/images/git.png");
 }
 .main .article .card p {
   margin-top: 0px;
