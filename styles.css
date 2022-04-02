@@ -337,8 +337,11 @@ template {
   display: none;
 }
 
-*, ::before, :after {
+*,
+::before,
+:after {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -358,12 +361,23 @@ body {
 .container .sidebar {
   grid-area: sidebar;
   background-color: #0ea5e9;
+  color: #fff;
+  padding-left: 40px;
+}
+.container .sidebar ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.container .sidebar ul:last-child {
+  margin-top: 30px;
+}
+.container .sidebar ul, .container .sidebar div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
 }
 .container .main {
   grid-area: main;
-}
-.container div {
-  border: 2px solid red;
 }
 
 /*# sourceMappingURL=styles.css.map */

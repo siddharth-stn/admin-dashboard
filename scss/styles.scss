@@ -2,8 +2,11 @@
 @use 'var';
 @use 'fonts';
 
-*, ::before, :after {
+*,
+::before,
+:after {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -15,23 +18,36 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: min(20%, 150px) 1fr;
-    grid-template-areas: 
-    "sidebar header"
-    "sidebar main";
-    
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+
     .header {
         grid-area: header;
     }
+
     .sidebar {
         grid-area: sidebar;
         background-color: var.$sidebar-background;
+        color: #fff;
+        padding-left: 40px;
+        ul {
+            list-style-type: none;
+            padding-left: 0px;
+        }
+
+        ul:last-child {
+            margin-top: 30px;
+        }
+
+        ul, div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+        }
     }
+
     .main {
         grid-area: main;
     }
-
-    div {
-        border: 2px solid red;
-    }
 }
-
